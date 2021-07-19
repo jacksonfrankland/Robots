@@ -15,3 +15,16 @@ export function clone<T> (source: T): T {
 export function unique<T> (items: T[]): T[] {
     return [...(new Set(items))];
 }
+
+export function sleep (delay) {
+    return new Promise(resolve => setTimeout(resolve, delay));
+}
+
+/**
+ * Coverts a color from a string to a number.
+ * @param color color in the form '#22FF22'
+ * @returns color in the form 0x22ff22
+ */
+export function colorStringToNumber (color: string) {
+    return Number(color.replace('#', '0x'));
+}

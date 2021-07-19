@@ -25,4 +25,13 @@ export default class Grid implements Trait {
         actor.position = this.center;
     }
 
+    get unit () {
+        return vec(this.size.x / this.axisSize.x, this.size.x / this.axisSize.x);
+    }
+
+    coordinatesToPosition (coordinates: Vector) {
+        let topLeft = this.center.minus(this.size.scaledBy(.5));
+        return topLeft.plus(coordinates.x * this.unit.x, coordinates.y * this.unit.y).plus(this.unit.scaledBy(.5));
+    }
+
 }

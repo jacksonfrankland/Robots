@@ -1,3 +1,5 @@
+import {clamp} from './util';
+
 /**
  * Represents a 2 dimensional Vector.
  */
@@ -63,6 +65,10 @@ export default class Vector {
             return this.y > 0 ? Math.PI : 0;
         }
         return Math.atan(this.y / this.x) + (this.x > 0 ? Math.PI / 2 : Math.PI / -2);
+    }
+
+    clamp (min: Vector, max: Vector) {
+        return new Vector(clamp(this.x, min.x, max.x), clamp(this.y, min.y, max.y));
     }
 
     /**

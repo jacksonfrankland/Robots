@@ -67,10 +67,11 @@ export default class Game {
         }
         actor.game = this;
         this.actors.push(actor);
+        return actor;
     }
 
     createActor (...traits: Trait[]) {
-        this.addActor(new Actor(...traits))
+        return this.addActor(new Actor(...traits))
     }
 
     /**

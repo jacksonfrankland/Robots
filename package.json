@@ -12,6 +12,7 @@
   },
   "devDependencies": {
     "@sveltejs/kit": "next",
+    "@types/tailwindcss": "^2.2.1",
     "airconsole-typescript": "^1.0.2",
     "autoprefixer": "^10.2.6",
     "postcss": "^8.3.0",

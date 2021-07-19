@@ -37,6 +37,24 @@ export default class Actor {
         this.container.y = position.y;
     }
 
+    get angle () {
+        return this.container.angle;
+    }
+
+    set angle (angle: number) {
+        if (!this.container) return;
+        this.container.angle = angle;
+    }
+
+    get rotation () {
+        return this.container.rotation;
+    }
+
+    set rotation (rotation: number) {
+        if (!this.container) return;
+        this.container.rotation = rotation;
+    }
+
     get size () {
         return vec(this.container?.width ?? 0, this.container?.height ?? 0);
     }
